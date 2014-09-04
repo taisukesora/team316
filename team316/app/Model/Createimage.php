@@ -1,5 +1,6 @@
 <?php
 
-class CreateImage extends AppMode{
+class Image extends AppMode{
 	$hasMany = array('Post');
+	
 }

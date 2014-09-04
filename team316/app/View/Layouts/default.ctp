@@ -35,6 +35,8 @@
 </head>
 
 <body>
+
+<!--
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -53,7 +55,7 @@
 
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
-					<li><?php echo $this->Html->link('Bootstrap3www', array(
+					<li><?php echo $this->Html->link('Bootstrap3', array(
 						'action' => 'bootstrap3'
 					)); ?></li>
 					<li><?php echo $this->Html->link('Bootstrap2', array(
@@ -63,7 +65,7 @@
 			</div>
 		</div>
 	</nav>
-
+-->
 	<div class="container">
 
 		<?php echo $this->fetch('content'); ?>
