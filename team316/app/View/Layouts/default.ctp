@@ -53,7 +53,7 @@
 
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
-					<li><?php echo $this->Html->link('Bootstrap3', array(
+					<li><?php echo $this->Html->link('Bootstrap3www', array(
 						'action' => 'bootstrap3'
 					)); ?></li>
 					<li><?php echo $this->Html->link('Bootstrap2', array(
