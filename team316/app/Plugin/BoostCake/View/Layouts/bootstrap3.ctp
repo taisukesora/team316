@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>
-		BoostCake1 -
+		アイデア発想ツール -
 		<?php echo $title_for_layout; ?>
 	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
