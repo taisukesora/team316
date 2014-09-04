@@ -1,7 +1,10 @@
 <div class="text-center">
 	<h1>発想支援ツール</h1>
-	<p class="">発想は常にインプットから生まれる。<br>無限のインプットを経て初めて至高のアイデアが発生するのです。<br>以下の3つの画像を上手くつなぎあわせて、ストーリーを作ってください</p>
+	<p class="">
+		RESULTS</p>
 </div>	
+
+<!-- 日付指定 -->
 
 
 <div class="row">
@@ -27,6 +30,15 @@
 	<
 </div>
 
-<div class="text-center">
-<?php echo $this->Html->link('投稿する', array('controller' => 'posts', 'action' => 'add', $images['Image']['id'])); ?>
-</div>
+<table class="table">
+	<tr>
+		<th>user</th>
+		<th>story</th>
+	</tr>
+	<?php foreach($images['Post'] as $post): ?>
+		<tr>
+			<td><?php echo $post['name']?></td>
+			<td><?php echo $post['body']?></td>
+		</tr>
+	<?php endforeach; ?>
+</table>

@@ -23,12 +23,17 @@ class PostsController extends AppController{
 		$this->set('post', $post);
 	}
 
-	public function add(){
+	public function add($image_id = null){
+
+		$this->set('image_id', $image_id);
+
 		if($this->request->is('post')){
 			$this->Post->create();
+			$this->request->data['Post']['image_id'] = $image_id;
+
 			if($this->Post->save($this->request->data)){
 				$this->Session->setFlash(__('Your post has been saved.'));
-				return $this->redirect(array('action' => 'index'));
+				return $this->redirect(array('controller' => 'images', 'action' => 'result', $image_id));
 			}
 			$this->Session->setFlash(__('Unable to add your post.'));	
 		}
@@ -45,10 +50,10 @@ class PostsController extends AppController{
 		}
 
 		if($this->request->is(array('post', 'put'))){
-			$this->Post->id = $id;
+			$this->Post->image_id = $id;
 			if($this->Post->save($this->request->data)){
 				$this->Session->setFlash(__('Your post has been updated.'));
-				return $this->redirect(array('action' => 'index'));
+				return $this->redirect(array('controller' => 'images', 'action' => 'index'));
 			}
 			$this->Session->setFlash(__('Unable to update your post.'));
 		}
